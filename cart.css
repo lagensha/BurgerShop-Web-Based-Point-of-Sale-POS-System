@@ -1,0 +1,16 @@
+
+.container-fluid{
+  background: linear-gradient(135deg, #c45353 0%, #360101 100%);
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 8px 32px rgba(163, 151, 151, 0.5);
+    border-bottom: 4px solid #585b5c;
+    position:fixed;
+    top: 0;
+    z-index: 1; 
+    display: li;
+}
+.names{
+    color: aliceblue;
+}
