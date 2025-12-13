@@ -15,263 +15,251 @@
   </div> -->
   <header class="header">
     <a href="#" class="logo">Burger Lovers</a>
-    <div id="cart-icon">
-      <i class="ri-shopping-cart-fill"></i>
+    <div id="cart-icon" >
+      <a href="cart.html"><i class="ri-shopping-cart-fill"></i></a>
       <span class="cart-item-count"></span>
     </div>
   </header>
- <div class="items"> 
-      <div class="product-conut">
-        <div class="product-box">
-          <div class="img-box">
-            <img src="asset/bacon-burger-beef.jpg">
-          </div>
-          <p class="product-title">Bacon beef burger</p>
-          <div class="price-and cart">
-            <span class="price">price: 1750.00</span>
-            <i class="ri-shopping-cart-fill"></i>
-          </div>
+  <div class="items">
+    <div class="product-conut" onclick="addItem('Bacon_beef');">
+      <div class="product-box">
+        <div class="img-box">
+          <img src="asset/bacon-burger-beef.jpg">
         </div>
-      </div>
-     
-         <div class="product-conut">
-        <div class="product-box">
-          <div class="img-box">
-            <img src="asset/bacon-cheddar-jalapeno-burger.jpg">
-          </div>
-          <p class="product-title">Bacon cheddar burger</p>
-          <div class="price-and cart">
-            <span class="price">price: 1750.00</span>
-            <i class="ri-shopping-cart-fill"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-conut">
-        <div class="product-box">
-          <div class="img-box">
-            <img src="asset/Chili Crunch Burger.jpg">
-          </div>
-          <p class="product-title">chili Crunch Burger</p>
-
-          <div class="price-and cart">
-            <span class="price">price: 1100.00</span>
-            <i class="ri-shopping-cart-fill"></i>
-          </div>
+        <p class="product-title">Bacon beef burger</p>
+        <div class="price-and">
+          <span class="price">price: 1750.00</span>
+          <i class="ri-shopping-cart-fill"></i>
         </div>
       </div>
     </div>
-  </div>
-    <!-- Wrap remaining products to also render 3-per-row -->
-    <div class="items">
-  <div class="product-conut">
-    <div class="product-box">
-      <div class="img-box">
-        <img src="asset/classic.jpg">
-      </div>
-      <p class="product-title">Classic Burger</p>
 
-      <div class="price-and cart">
-        <span class="price">price: 430.00</span>
-        <i class="ri-shopping-cart-fill"></i>
+    <div class="product-conut" onclick="addItem('Bacon_cheddar');">
+      <div class="product-box">
+        <div class="img-box">
+          <img src="asset/bacon-cheddar-jalapeno-burger.jpg">
+        </div>
+        <p class="product-title">Bacon cheddar burger</p>
+        <div class="price-and">
+          <span class="price">price: 1750.00</span>
+          <i class="ri-shopping-cart-fill"></i>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="product-conut">
-    <div class="product-box">
-      <div class="img-box">
-        <img src="asset/Chili Crunch Burger.jpg">
-      </div>
-      <p class="product-title">chili Crunch Burger</p>
 
-      <div class="price-and cart">
-        <span class="price">price: 1100.00</span>
-        <i class="ri-shopping-cart-fill"></i>
-      </div>
-    </div>
-  </div>
+    <div class="product-conut" onclick="addItem('Chili_Crunch');">
+      <div class="product-box">
+        <div class="img-box">
+          <img src="asset/Chili Crunch Burger.jpg">
+        </div>
+        <p class="product-title">chili Crunch Burger</p>
 
-  <div class="product-conut">
-    <div class="product-box">
-      <div class="img-box">
-        <img src="asset/double-stack-beef-burger.jpg">
-      </div>
-      <p class="product-title">Double stack beef burger </p>
-      <div class="price-and cart">
-        <span class="price">price:2600.00</span>
-        <i class="ri-shopping-cart-fill"></i>
+        <div class="price-and">
+          <span class="price">price: 1100.00</span>
+          <i class="ri-shopping-cart-fill"></i>
+        </div>
       </div>
     </div>
   </div>
+  </div>
+  <!-- Wrap remaining products to also render 3-per-row -->
+  <div class="items" onclick="addItem('Bacon_cheddar');">
+    <div class="product-conut">
+      <div class="product-box">
+        <div class="img-box">
+          <img src="asset/classic.jpg">
+        </div>
+        <p class="product-title">Classic Burger</p>
 
-  <div class="product-conut">
-    <div class="product-box">
-      <div class="img-box">
-        <img src="asset/hawaiian-burger-pineapple-ham-cheese-topped-crispy-fried-onion.jpg">
-      </div>
-      <p class="product-title">Hawaiian pineapple burger</p>
-      <div class="price-and cart">
-        <span class="price">price:2700.00</span>
-        <i class="ri-shopping-cart-fill"></i>
+        <div class="price-and">
+          <span class="price">price: 430.00</span>
+          <i class="ri-shopping-cart-fill"></i>
+        </div>
       </div>
     </div>
-  </div>
+    <div class="product-conut" onclick="addItem('Chili_Crunch');">
+      <div class="product-box">
+        <div class="img-box">
+          <img src="asset/Chili Crunch Burger.jpg">
+        </div>
+        <p class="product-title">chili Crunch Burger</p>
 
-  <div class="product-conut">
-    <div class="product-box">
-      <div class="img-box">
-        <img src="asset/mushroom-swiss-burger.jpg">
-      </div>
-      <p class="product-title">Hawaiian pineapple burger</p>
-      <div class="price-and cart">
-        <span class="price">price:1800.00</span>
-        <i class="ri-shopping-cart-fill"></i>
+        <div class="price-and">
+          <span class="price">price: 1100.00</span>
+          <i class="ri-shopping-cart-fill"></i>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- fries -->
+    <div class="product-conut" onclick="addItem('Double_stack_beef');">
+      <div class="product-box">
+        <div class="img-box">
+          <img src="asset/double-stack-beef-burger.jpg">
+        </div>
+        <p class="product-title">Double stack beef burger </p>
+        <div class="price-and">
+          <span class="price">price:2600.00</span>
+          <i class="ri-shopping-cart-fill"></i>
+        </div>
+      </div>
+    </div>
 
-  <div class="product-conut">
-    <div class="product-box">
-      <div class="img-box">
-        <img src="asset/Classic French Fries.jpg">
-      </div>
-      <p class="product-title">Classic french fries </p>
-      <div class="price-and cart">
-        <span class="price">price:550.00</span>
-        <i class="ri-shopping-cart-fill"></i>
-      </div>
-    </div>
-  </div>
-  <div class="product-conut">
-    <div class="product-box">
-      <div class="img-box">
-        <img src="asset/chili-cheese-fries.jpg">
-      </div>
-      <p class="product-title">Chilli cheese fries</p>
-      <div class="price-and cart">
-        <span class="price">price:700.00</span>
-        <i class="ri-shopping-cart-fill"></i>
+    <div class="product-conut" onclick="addItem('Bacon_cheddar');">
+      <div class="product-box">
+        <div class="img-box">
+          <img src="asset/hawaiian-burger-pineapple-ham-cheese-topped-crispy-fried-onion.jpg">
+        </div>
+        <p class="product-title">Hawaiian pineapple burger</p>
+        <div class="price-and">
+          <span class="price">price:2700.00</span>
+          <i class="ri-shopping-cart-fill"></i>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="product-conut">
-    <div class="product-box">
-      <div class="img-box">
-        <img src="asset/Curly Fries.jpg">
-      </div>
-      <p class="product-title">Curly Fries </p>
-      <div class="price-and cart">
-        <span class="price">price:800.00</span>
-        <i class="ri-shopping-cart-fill"></i>
-      </div>
-    </div>
-  </div>
-  <div class="product-conut">
-    <div class="product-box">
-      <div class="img-box">
-        <img src="asset/Garlic Parmesan Fries.jpg">
-      </div>
-      <p class="product-title">Garlic Parmesan fries</p>
-      <div class="price-and cart">
-        <span class="price">price:1700.00</span>
-        <i class="ri-shopping-cart-fill"></i>
-      </div>
-    </div>
-  </div>
-  <div class="product-conut">
-    <div class="product-box">
-      <div class="img-box">
-        <img src="asset/Sweet Potato Fries.jpg">
-      </div>
-      <p class="product-title">Sweet potato fries</p>
-      <div class="price-and cart">
-        <span class="price">price:650.00</span>
-        <i class="ri-shopping-cart-fill"></i>
-      </div>
-    </div>
-  </div>
-  <div class="product-conut">
-    <div class="product-box">
-      <div class="img-box">
-        <img src="asset/Waffle Fries.jpg">
-      </div>
-      <p class="product-title">Waffle fries </p>
-      <div class="price-and cart">
-        <span class="price">price:750.00</span>
-        <i class="ri-shopping-cart-fill"></i>
-      </div>
-    </div>
-  </div>
-  <!-- drinks -->
-  <div class="product-conut">
-    <div class="product-box">
-      <div class="img-box">
-        <img src="asset/coca.jpg">
-      </div>
-      <p class="product-title">Coca-cola </p>
-      <div class="price-and cart">
-        <span class="price">price:150.00</span>
-        <i class="ri-shopping-cart-fill"></i>
-      </div>
-    </div>
-  </div>
-  <div class="product-conut">
-    <div class="product-box">
-      <div class="img-box">
-        <img src="asset/Cream-soda.jpg">
-      </div>
-      <p class="product-title">Cream-soda </p>
-      <div class="price-and cart">
-        <span class="price">price:160.00</span>
-        <i class="ri-shopping-cart-fill"></i>
-      </div>
-    </div>
-  </div>
-  <div class="product-conut">
-    <div class="product-box">
-      <div class="img-box">
-        <img src="asset/pepsi.jpg">
-      </div>
-      <p class="product-title">Pepsi </p>
-      <div class="price-and cart">
-        <span class="price">price:150.00</span>
-        <i class="ri-shopping-cart-fill"></i>
-      </div>
-    </div>
-  </div>
+    
+    <!-- fries -->
 
-  <div class="product-conut">
-    <div class="product-box">
-      <div class="img-box">
-        <img src="asset/fantaorange.jpg">
-      </div>
-      <p class="product-title">Fanta Orange </p>
-      <div class="price-and cart">
-        <span class="price">price:150.00</span>
-        <i class="ri-shopping-cart-fill"></i>
-      </div>
-    </div>
-  </div>
-  <div class="product-conut">
-    <div class="product-box">
-      <div class="img-box">
-        <img src="asset/fantapinaple.jpg">
-      </div>
-      <p class="product-title">Fanta pineapple</p>
-      <div class="price-and cart">
-        <span class="price">price:250.00</span>
-        <i class="ri-shopping-cart-fill"></i>
+    <div class="product-conut" onclick="addItem('Classic_french_fries');">
+      <div class="product-box">
+        <div class="img-box">
+          <img src="asset/Classic French Fries.jpg">
+        </div>
+        <p class="product-title">Classic french fries </p>
+        <div class="price-and">
+          <span class="price">price:550.00</span>
+          <i class="ri-shopping-cart-fill"></i>
+        </div>
       </div>
     </div>
-  </div>
+    <div class="product-conut" onclick="addItem('Chilli_cheese_fries');">
+      <div class="product-box">
+        <div class="img-box">
+          <img src="asset/chili-cheese-fries.jpg">
+        </div>
+        <p class="product-title">Chilli cheese fries</p>
+        <div class="price-and">
+          <span class="price">price:700.00</span>
+          <i class="ri-shopping-cart-fill"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-conut" onclick="addItem('Curly_Fries');">
+      <div class="product-box">
+        <div class="img-box">
+          <img src="asset/Curly Fries.jpg">
+        </div>
+        <p class="product-title">Curly Fries </p>
+        <div class="price-and">
+          <span class="price">price:800.00</span>
+          <i class="ri-shopping-cart-fill"></i>
+        </div>
+      </div>
+    </div>
+    <div class="product-conut" onclick="addItem('Garlic_Parmesan_Fries');">
+      <div class="product-box">
+        <div class="img-box">
+          <img src="asset/Garlic Parmesan Fries.jpg">
+        </div>
+        <p class="product-title">Garlic Parmesan fries</p>
+        <div class="price-and">
+          <span class="price">price:1700.00</span>
+          <i class="ri-shopping-cart-fill"></i>
+        </div>
+      </div>
+    </div>
+    <div class="product-conut" onclick="addItem('Sweet_Potato_Fries');">
+      <div class="product-box">
+        <div class="img-box">
+          <img src="asset/Sweet Potato Fries.jpg">
+        </div>
+        <p class="product-title">Sweet potato fries</p>
+        <div class="price-and">
+          <span class="price">price:650.00</span>
+          <i class="ri-shopping-cart-fill"></i>
+        </div>
+      </div>
+    </div>
+    <div class="product-conut" onclick="addItem('Waffle_Fries');">
+      <div class="product-box">
+        <div class="img-box">
+          <img src="asset/Waffle Fries.jpg">
+        </div>
+        <p class="product-title">Waffle fries </p>
+        <div class="price-and">
+          <span class="price">price:750.00</span>
+          <i class="ri-shopping-cart-fill"></i>
+        </div>
+      </div>
+    </div>
+    <!-- drinks -->
+    <div class="product-conut" onclick="addItem('Coca_cola');">
+      <div class="product-box">
+        <div class="img-box">
+          <img src="asset/coca.jpg">
+        </div>
+        <p class="product-title">Coca-cola </p>
+        <div class="price-and">
+          <span class="price">price:150.00</span>
+          <i class="ri-shopping-cart-fill"></i>
+        </div>
+      </div>
+    </div>
+    <div class="product-conut" onclick="addItem('Bacon_cheddar');">
+      <div class="product-box">
+        <div class="img-box">
+          <img src="asset/Cream-soda.jpg">
+        </div>
+        <p class="product-title">Cream-soda </p>
+        <div class="price-and">
+          <span class="price">price:160.00</span>
+          <i class="ri-shopping-cart-fill"></i>
+        </div>
+      </div>
+    </div>
+    <div class="product-conut" onclick="addItem('Pepsi');">
+      <div class="product-box">
+        <div class="img-box">
+          <img src="asset/pepsi.jpg">
+        </div>
+        <p class="product-title">Pepsi </p>
+        <div class="price-and">
+          <span class="price">price:150.00</span>
+          <i class="ri-shopping-cart-fill"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-conut" onclick="addItem('Fanta_Orange');">
+      <div class="product-box">
+        <div class="img-box">
+          <img src="asset/fantaorange.jpg">
+        </div>
+        <p class="product-title">Fanta Orange </p>
+        <div class="price-and">
+          <span class="price">price:150.00</span>
+          <i class="ri-shopping-cart-fill"></i>
+        </div>
+      </div>
+    </div>
+    <div class="product-conut" onclick="addItem('Fanta_Pineapple');">
+      <div class="product-box">
+        <div class="img-box">
+          <img src="asset/fantapinaple.jpg">
+        </div>
+        <p class="product-title">Fanta pineapple</p>
+        <div class="price-and">
+          <span class="price">price:250.00</span>
+          <i class="ri-shopping-cart-fill"></i>
+        </div>
+      </div>
+    </div>
   </div>
   </div>
   </div>
   <div class="cart">
-  <h3 class="cart-title"> Your Cart</h3>
+    <h3 class="cart-title"> Your Cart</h3>
     <div class="cart-details">
       <h2 class="cart-product-title">Bacon beef burger</h2>
       <span class="cart-price">price: 1750.00</span>
@@ -282,18 +270,19 @@
       </div>
     </div>
 
-   
 
-  <div class="total">
-    <div class="total-title">Total</div>
-    <div class="total-price">Rs 0.00</div>
+
+    <div class="total">
+      <div class="total-title">Total</div>
+      <div class="total-price">Rs 0.00</div>
+    </div>
+
+    <button class="btn-buy">Order Now</button>
+
   </div>
 
-  <button class="btn-buy">Order Now</button> 
 
-</div>
-
-
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
+
 </html>
