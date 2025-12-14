@@ -9,10 +9,11 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
-<body class="body">
+<body class="body" onload="viewCart();">
   <!-- Header -->
   <header class="header">
-    <a href="index.html" class="logo">Burger Lovers</a>
+    <a href="Burger.html" class="back-btn" title="Back to home"><i class="ri-arrow-left-line"></i></a>
+    <a href="Burger.html" class="logo">Burger Lovers</a>
     <div id="cart-icon">
       <i class="ri-shopping-cart-fill"></i>
       <span class="cart-item-count">0</span>
@@ -25,324 +26,9 @@
       <h1 class="cart-heading">Shopping Cart</h1>
       
       <!-- Cart Items Section -->
-      <div class="cart-items-section">
-        <div class="cart-item">
-          <div class="item-image">
-            <img src="asset/bacon-burger-beef.jpg" alt="Bacon beef burger">
-          </div>
-          <div class="item-details">
-            <h3 class="item-name">Bacon beef burger</h3>
-            <span class="item-price">Rs 1,750.00</span>
-          </div>
-          <div class="item-quantity">
-            <button class="qty-btn">-</button>
-            <span class="qty-number">1</span>
-            <button class="qty-btn">+</button>
-          </div>
-          <div class="item-total">
-            <span class="total-price">Rs 1,750.00</span>
-          </div>
-          <button class="btn-remove"><i class="ri-close-line"></i></button>
-        </div>
+      <div class="cart-items-section" id="cart-items-section">
 
-        <div class="cart-item">
-          <div class="item-image">
-            <img src="asset/bacon-cheddar-jalapeno-burger.jpg" alt="Bacon cheddar burger">
-          </div>
-          <div class="item-details"id="2">
-            <h3 class="item-name">Bacon cheddar burger</h3>
-            <span class="item-price">Rs 1,750.00</span>
-          </div>
-          <div class="item-quantity">
-            <button class="qty-btn">-</button>
-            <span class="qty-number">1</span>
-            <button class="qty-btn">+</button>
-          </div>
-          <div class="item-total">
-            <span class="total-price">Rs 1,750.00</span>
-          </div>
-          <button class="btn-remove"><i class="ri-close-line"></i></button>
-        </div>
-
-        <div class="cart-item">
-          <div class="item-image">
-            <img src="asset/Chili Crunch Burger.jpg" alt="Chili Crunch Burger">
-          </div>
-          <div class="item-details">
-            <h3 class="item-name">Chili Crunch Burger</h3>
-            <span class="item-price">Rs 1,100.00</span>
-          </div>
-          <div class="item-quantity">
-            <button class="qty-btn">-</button>
-            <span class="qty-number">1</span>
-            <button class="qty-btn">+</button>
-          </div>
-          <div class="item-total">
-            <span class="total-price">Rs 2,200.00</span>
-          </div>
-          <button class="btn-remove"><i class="ri-close-line"></i></button>
-        </div>
       </div>
-    <div class="cart-item">
-          <div class="item-image">
-            <img src="asset/chili-cheese-fries.jpg" alt="Chili Crunch Burger">
-          </div>
-          <div class="item-details">
-            <h3 class="item-name">Chili Cheese Burger</h3>
-            <span class="item-price">Rs 1,100.00</span>
-          </div>
-          <div class="item-quantity">
-            <button class="qty-btn">-</button>
-            <span class="qty-number">1</span>
-            <button class="qty-btn">+</button>
-          </div>
-          <div class="item-total">
-            <span class="total-price">Rs 2,200.00</span>
-          </div>
-          <button class="btn-remove"><i class="ri-close-line"></i></button>
-        </div>
-      </div>
-
-       <div class="cart-item">
-          <div class="item-image">
-            <img src="asset/hawaiian-burger-pineapple-ham-cheese-topped-crispy-fried-onion.jpg" alt="Chili Crunch Burger">
-          </div>
-          <div class="item-details">
-            <h3 class="item-name">hawaiian-burger-pineapple </h3>
-            <span class="item-price">Rs 1,100.00</span>
-          </div>
-          <div class="item-quantity">
-            <button class="qty-btn">-</button>
-            <span class="qty-number">1</span>
-            <button class="qty-btn">+</button>
-          </div>
-          <div class="item-total">
-            <span class="total-price">Rs 2,200.00</span>
-          </div>
-          <button class="btn-remove"><i class="ri-close-line"></i></button>
-        </div>
-      </div>
-
-           <div class="cart-item">
-          <div class="item-image">
-            <img src="asset/mushroom-swiss-burger.jpg" alt="Chili Crunch Burger">
-          </div>
-          <div class="item-details">
-            <h3 class="item-name">mushroom-swiss-burger </h3>
-            <span class="item-price">Rs 1,100.00</span>
-          </div>
-          <div class="item-quantity">
-            <button class="qty-btn">-</button>
-            <span class="qty-number">1</span>
-            <button class="qty-btn">+</button>
-          </div>
-          <div class="item-total">
-            <span class="total-price">Rs 2,200.00</span>
-          </div>
-          <button class="btn-remove"><i class="ri-close-line"></i></button>
-        </div>
-      </div>
-
-           <div class="cart-item">
-          <div class="item-image">
-            <img src="asset/double-stack-beef-burger.jpg" alt="Chili Crunch Burger">
-          </div>
-          <div class="item-details">
-            <h3 class="item-name">double-stack-beef-burger </h3>
-            <span class="item-price">Rs 1,100.00</span>
-          </div>
-          <div class="item-quantity">
-            <button class="qty-btn">-</button>
-            <span class="qty-number">1</span>
-            <button class="qty-btn">+</button>
-          </div>
-          <div class="item-total">
-            <span class="total-price">Rs 2,200.00</span>
-          </div>
-          <button class="btn-remove"><i class="ri-close-line"></i></button>
-        </div>
-      </div>
-
-                 <div class="cart-item">
-          <div class="item-image">
-            <img src="asset/classic.jpg" alt="Chili Crunch Burger">
-          </div>
-          <div class="item-details">
-            <h3 class="item-name">Classic Burger</h3>
-            <span class="item-price">Rs 1,100.00</span>
-          </div>
-          <div class="item-quantity">
-            <button class="qty-btn">-</button>
-            <span class="qty-number">1</span>
-            <button class="qty-btn">+</button>
-          </div>
-          <div class="item-total">
-            <span class="total-price">Rs 2,200.00</span>
-          </div>
-          <button class="btn-remove"><i class="ri-close-line"></i></button>
-        </div>
-      </div>
-    
-              <div class="cart-item">
-          <div class="item-image">
-            <img src="asset/Classic French Fries.jpg" alt="Chili Crunch Burger">
-          </div>
-          <div class="item-details">
-            <h3 class="item-name">Classic french fries </h3>
-            <span class="item-price">Rs 1,100.00</span>
-          </div>
-          <div class="item-quantity">
-            <button class="qty-btn">-</button>
-            <span class="qty-number">1</span>
-            <button class="qty-btn">+</button>
-          </div>
-          <div class="item-total">
-            <span class="total-price">Rs 1,200.00</span>
-          </div>
-          <button class="btn-remove"><i class="ri-close-line"></i></button>
-        </div>
-      </div>  
-
-      
-              <div class="cart-item">
-          <div class="item-image">
-            <img src="asset/Sweet Potato Fries.jpg" alt="Chili Crunch Burger">
-          </div>
-          <div class="item-details">
-            <h3 class="item-name"> Sweet Potato Fries </h3>
-            <span class="item-price">Rs 1,100.00</span>
-          </div>
-          <div class="item-quantity">
-            <button class="qty-btn">-</button>
-            <span class="qty-number">1</span>
-            <button class="qty-btn">+</button>
-          </div>
-          <div class="item-total">
-            <span class="total-price">Rs 1,200.00</span>
-          </div>
-          <button class="btn-remove"><i class="ri-close-line"></i></button>
-        </div>
-      </div> 
-
-      
-              <div class="cart-item">
-          <div class="item-image">
-            <img src="asset/Waffle Fries.jpg" alt="Chili Crunch Burger">
-          </div>
-          <div class="item-details">
-            <h3 class="item-name"> Waffle Fries </h3>
-            <span class="item-price">Rs 1,100.00</span>
-          </div>
-          <div class="item-quantity">
-            <button class="qty-btn">-</button>
-            <span class="qty-number">1</span>
-            <button class="qty-btn">+</button>
-          </div>
-          <div class="item-total">
-            <span class="total-price">Rs 1,200.00</span>
-          </div>
-          <button class="btn-remove"><i class="ri-close-line"></i></button>
-        </div>
-      </div> 
-
-              <div class="cart-item">
-          <div class="item-image">
-            <img src="asset/Garlic Parmesan Fries.jpg" alt="Chili Crunch Burger">
-          </div>
-          <div class="item-details">
-            <h3 class="item-name">Garlic_Parmesan_Fries </h3>
-            <span class="item-price">Rs 1,100.00</span>
-          </div>
-          <div class="item-quantity">
-            <button class="qty-btn">-</button>
-            <span class="qty-number">1</span>
-            <button class="qty-btn">+</button>
-          </div>
-          <div class="item-total">
-            <span class="total-price">Rs 1,200.00</span>
-          </div>
-          <button class="btn-remove"><i class="ri-close-line"></i></button>
-        </div>
-      </div> 
-
-                   <div class="cart-item">
-          <div class="item-image">
-            <img src="asset/pepsi.jpg" alt="Chili Crunch Burger">
-          </div>
-          <div class="item-details">
-            <h3 class="item-name">Garlic_Parmesan_Fries </h3>
-            <span class="item-price">Rs 1,100.00</span>
-          </div>
-          <div class="item-quantity">
-            <button class="qty-btn">-</button>
-            <span class="qty-number">1</span>
-            <button class="qty-btn">+</button>
-          </div>
-          <div class="item-total">
-            <span class="total-price">Rs 1,200.00</span>
-          </div>
-          <button class="btn-remove"><i class="ri-close-line"></i></button>
-        </div>
-      </div> 
-            <div class="cart-item">
-          <div class="item-image">
-            <img src="asset/fantaorange.jpg" alt="Chili Crunch Burger">
-          </div>
-          <div class="item-details">
-            <h3 class="item-name">Fanta Orange </h3>
-            <span class="item-price">Rs 1,100.00</span>
-          </div>
-          <div class="item-quantity">
-            <button class="qty-btn">-</button>
-            <span class="qty-number">1</span>
-            <button class="qty-btn">+</button>
-          </div>
-          <div class="item-total">
-            <span class="total-price">Rs 1,200.00</span>
-          </div>
-          <button class="btn-remove"><i class="ri-close-line"></i></button>
-        </div>
-      </div> 
-
-       <div class="cart-item">
-          <div class="item-image">
-            <img src="asset/fantapinaple.jpg" alt="Chili Crunch Burger">
-          </div>
-          <div class="item-details">
-            <h3 class="item-name">Fanta Pineapple </h3>
-            <span class="item-price">Rs 1,100.00</span>
-          </div>
-          <div class="item-quantity">
-            <button class="qty-btn">-</button>
-            <span class="qty-number">1</span>
-            <button class="qty-btn">+</button>
-          </div>
-          <div class="item-total">
-            <span class="total-price">Rs 1,200.00</span>
-          </div>
-          <button class="btn-remove"><i class="ri-close-line"></i></button>
-        </div>
-      </div> 
-
-             <div class="cart-item">
-          <div class="item-image">
-            <img src="asset/Cream-soda.jpg" alt="Chili Crunch Burger">
-          </div>
-          <div class="item-details">
-            <h3 class="item-name"> Cream-soda </h3>
-            <span class="item-price">Rs 1,100.00</span>
-          </div>
-          <div class="item-quantity">
-            <button class="qty-btn">-</button>
-            <span class="qty-number">1</span>
-            <button class="qty-btn">+</button>
-          </div>
-          <div class="item-total">
-            <span class="total-price">Rs 1,200.00</span>
-          </div>
-          <button class="btn-remove"><i class="ri-close-line"></i></button>
-        </div>
-      </div> 
 
       <!-- Empty Cart Message (hidden by default) -->
       <div class="empty-cart" style="display: none;">
@@ -361,12 +47,12 @@
       
       <div class="summary-row">
         <span class="summary-label">Subtotal</span>
-        <span class="summary-value">Rs 5,700.00</span>
+        <span class="summary-value" id="sub-total">Rs 0,000.00</span>
       </div>
 
       <div class="summary-row">
         <span class="summary-label">Tax (10%)</span>
-        <span class="summary-value">Rs 570.00</span>
+        <span class="summary-value" id="summary-value">Rs 000.00</span>
       </div>
 
       <div class="summary-row">
@@ -378,12 +64,13 @@
 
       <div class="summary-row total-row">
         <span class="summary-label">Total</span>
-        <span class="summary-value total-amount">Rs 6,370.00</span>
+        <span class="summary-value total-amount" id="total-amount">Rs 6,370.00</span>
       </div>
 
       <button class="btn-checkout">Proceed to Checkout</button>
       <a href="burger.html" class="btn-continue">Continue Shopping</a>
     </div>
+
   </div>
 
   <script src="app.js"></script>
