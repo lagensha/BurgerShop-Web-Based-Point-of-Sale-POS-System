@@ -1,56 +1,23 @@
-Items = [];
-
+products = [];
+products=JSON.parse(localStorage.getItem("products")) || [];
 function addItem(item) {
-  Items.push(item);
-  console.log(Items);
-  localStorage.setItem("Items", JSON.stringify(Items));
+  products.push(item);
+  console.log(products);
+  localStorage.setItem("products", JSON.stringify(products));
 }
-
 
 function viewCart() {
   let subtotal = 0;
 
   var body = "";
-  let subproducts = localStorage.getItem("Items");
+  let subproducts = localStorage.getItem("products");
   subproducts = JSON.parse(subproducts);
 
   subproducts.forEach(element => {
-    console.log("Item: " + element);
-    switch (element) {
-      case 'Garlic_Parmesan_Fries':
-  
-        break;
-      case 'Sweet_Potato_Fries':
-        
-        break;
-      case 'Waffle_Fries':
-      
-        break;
-              case 'Pepsi':
-        
-        break;
-      case 'Fanta_Orange':
-        
-        break;
-      case 'Fanta_Pineapple':
-        
-        break;
-      case 'Classic_Burger':
-        
-        break;
-      case 'Cheese_Burger':
-        
-        break;
-      case 'Bacon_Burger':
-        
-        break;
-      case 'Mushroom_Swiss_Burger':
-        
-        break;
-      case 'Veggie_Burger':
-        
-        break;
-     case 'Bacon_beef':
+    console.log("products: " + element);
+    switch(element){
+
+    case 'Bacon_beef':
       body += `<div class="cart-item">
           <div class="item-image">
             <img src="asset/bacon-burger-beef.jpg" alt="Bacon beef burger">
@@ -72,14 +39,14 @@ function viewCart() {
         </div>`;
         subtotal+=1750;
         break;
-      case 'Bacon_cheddar':
-        body += `<div class="cart-item">
+        case  'Bacon_cheddar':
+         body += `<div class="cart-item">
           <div class="item-image">
             <img src="asset/bacon-cheddar-jalapeno-burger.jpg" alt="Bacon cheddar burger">
           </div>
           <div class="item-details">
             <h3 class="item-name">Bacon cheddar burger</h3>
-            <p class="item-description">Crispy bacon with melted cheddar</p>
+            <p class="item-description">Juicy cheddar with crispy bacon</p>
             <span class="item-price">Rs 1,750.00</span>
           </div>
           <div class="item-quantity">
@@ -87,37 +54,14 @@ function viewCart() {
             <span class="qty-number">1</span>
             <button class="qty-btn">+</button>
           </div>
-          <div class="item-total">
-            <span class="total-price" id="total-price-item">Rs 1,750.00</span>
+          <div class="itme-total">
+            <span class="total-price" id="total-price-item" >Rs 1,750.00</span>
           </div>
           <button class="btn-remove" onclick="removeItem(this,'Bacon_cheddar')"><i class="ri-close-line"></i></button>
         </div>`;
-        subtotal += 1750;
+         subtotal += 1750;
         break;
-
-      case 'Chili_Crunch':
-        body += `<div class="cart-item">
-          <div class="item-image">
-            <img src="asset/Chili Crunch Burger.jpg" alt="Chili Crunch Burger">
-          </div>
-          <div class="item-details">
-            <h3 class="item-name">Chili Crunch Burger</h3>
-            <p class="item-description">Spicy chili with crispy crunch</p>
-            <span class="item-price">Rs 1,100.00</span>
-          </div>
-          <div class="item-quantity">
-            <button class="qty-btn">-</button>
-            <span class="qty-number">2</span>
-            <button class="qty-btn">+</button>
-          </div>
-          <div class="item-total">
-            <span class="total-price" id="total-price-item">Rs 2,200.00</span>
-          </div>
-          <button class="btn-remove" onclick="removeItem(this,'Chili_Crunch')"><i class="ri-close-line"></i></button>
-        </div>`;
-        subtotal += 2200;
-        break;
-          case  'Chili_Crunch':
+           case  'Chili_Crunch':
          body += `<div class="cart-item">
           <div class="item-image">
             <img src="asset/Chili Crunch Burger.jpg" alt="Chili crunch burger">
@@ -502,10 +446,10 @@ case  'Cream_soda':
           <button class="btn-remove" onclick="removeItem(this,"null")"><i class="ri-close-line"></i></button>
         </div>`;
         break;
-    }
-  });
+        }
+    });
 
-  document.getElementById("cart-items-section").innerHTML = body;
+ document.getElementById("cart-items-section").innerHTML = body;
   document.getElementById("sub-total").innerText = "Rs " + (subtotal) + ".00";
   document.getElementById("summary-value").innerText = "Rs " + (subtotal * 0.1)+ ".00";
   document.getElementById("total-amount").innerText = "Rs " + (subtotal + (subtotal * 0.1)+100) + ".00";
@@ -513,12 +457,14 @@ case  'Cream_soda':
 
 function removeItem(element,name) {
   element.parentNode.remove();  
-  subproducts = JSON.parse(localStorage.getItem("Items"));
-  const index = subproducts.indexOf(name);
+ 
+   const index = products.indexOf(name);
   if (index > -1) {
-    subproducts.splice(index, 1);
+    products.splice(index, 1);
   }
-  localStorage.setItem("Items", JSON.stringify(subproducts));
 
-  viewCart();
+  localStorage.setItem("products", JSON.stringify(products));
+
+ viewCart;
+
 }
