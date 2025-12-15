@@ -1,5 +1,4 @@
-prdoucts = [];
-
+Items = [];
 
 function addItem(item) {
   Items.push(item);
@@ -7,83 +6,51 @@ function addItem(item) {
   localStorage.setItem("Items", JSON.stringify(Items));
 }
 
+
 function viewCart() {
-  let subtotal=0;
-    let body = "";
-    let subproduct=localStorage.getItem("Items");
-    subpeoducts=JSON.parse(subproduct);
-    
-    prdoucts.forEach(element => {
-       console.log("Item :" + element);
-      switch (element) {
-   case 'Bacon beef burger':
-      alert("Bacon beef Burger added to cart");
+  let subtotal = 0;
+
+  var body = "";
+  let subproducts = localStorage.getItem("Items");
+  subproducts = JSON.parse(subproducts);
+
+  subproducts.forEach(element => {
+    console.log("Item: " + element);
+    switch (element) {
+      case 'Garlic_Parmesan_Fries':
+  
         break;
-  case 'Bacon cheddar burger':
-    alert("Bacon cheddar burger added to cart");
-    break;
-
-    case 'Chili crunch burger':
-    alert("Chili crunch burger added to cart");
-    break;
-
-    case 'Classic burger':
-    alert("Classic burger added to cart");
-    break;
-
-     case 'Double stack beef burger':
-    alert("Double stack beef burger added to cart");
-    break;
-    
-      case 'Hawaiian pineapple burger':
-    alert("Hawaiian pineapple burger added to cart");
-    break;
-
-    case 'Classic french fries':
-    alert("Classic frnch fries added to cart");
-    break;
-    
-        case 'Chilli cheese fries':
-    alert("Chilli cheese fries added to cart");
-    break;
-
-        case 'Curly fries':
-    alert("Curly  fries added to cart");
-    break;
-    
-        case 'Garlic parmesan french fries':
-    alert("Garlic parmesan fries added to cart");
-    break;
-
-       case 'Sweet potato french fries':
-    alert("Sweet potato fries added to cart");
-    break;  
-    
-      case 'Waffle fries':
-    alert("Waffle fries added to cart");
-    break;
-
-     case ' Coca-cola':
-    alert("Coca-cola added to cart");
-    break;
-
-      case 'Cream-soda':
-    alert("Cream-soda added to cart");
-    break;
-
-      case 'Pepsi':
-    alert("Pepsi added to cart");
-    break;
-
-      case 'Fanta Orange':
-    alert("Fanta Orange added to cart");
-    break;
-
-      case 'Fanta pineapple':
-    alert("Fanta pineapple added to cart");
-    break;
-
-    case 'Bacon beef burger':
+      case 'Sweet_Potato_Fries':
+        
+        break;
+      case 'Waffle_Fries':
+      
+        break;
+              case 'Pepsi':
+        
+        break;
+      case 'Fanta_Orange':
+        
+        break;
+      case 'Fanta_Pineapple':
+        
+        break;
+      case 'Classic_Burger':
+        
+        break;
+      case 'Cheese_Burger':
+        
+        break;
+      case 'Bacon_Burger':
+        
+        break;
+      case 'Mushroom_Swiss_Burger':
+        
+        break;
+      case 'Veggie_Burger':
+        
+        break;
+     case 'Bacon_beef':
       body += `<div class="cart-item">
           <div class="item-image">
             <img src="asset/bacon-burger-beef.jpg" alt="Bacon beef burger">
@@ -105,14 +72,14 @@ function viewCart() {
         </div>`;
         subtotal+=1750;
         break;
-        case  'Bacon cheddar burger':
-         body += `<div class="cart-item">
+      case 'Bacon_cheddar':
+        body += `<div class="cart-item">
           <div class="item-image">
             <img src="asset/bacon-cheddar-jalapeno-burger.jpg" alt="Bacon cheddar burger">
           </div>
           <div class="item-details">
             <h3 class="item-name">Bacon cheddar burger</h3>
-            <p class="item-description">Juicy cheddar with crispy bacon</p>
+            <p class="item-description">Crispy bacon with melted cheddar</p>
             <span class="item-price">Rs 1,750.00</span>
           </div>
           <div class="item-quantity">
@@ -120,14 +87,37 @@ function viewCart() {
             <span class="qty-number">1</span>
             <button class="qty-btn">+</button>
           </div>
-          <div class="itme-total">
-            <span class="total-price" id="total-price-item" >Rs 1,750.00</span>
+          <div class="item-total">
+            <span class="total-price" id="total-price-item">Rs 1,750.00</span>
           </div>
-          <button class="btn-remove" onclick="removeItem(this,'Bacon_cheddar_burger')"><i class="ri-close-line"></i></button>
+          <button class="btn-remove" onclick="removeItem(this,'Bacon_cheddar')"><i class="ri-close-line"></i></button>
         </div>`;
-         subtotal += 1750;
+        subtotal += 1750;
         break;
-           case  'Chili crunch burger':
+
+      case 'Chili_Crunch':
+        body += `<div class="cart-item">
+          <div class="item-image">
+            <img src="asset/Chili Crunch Burger.jpg" alt="Chili Crunch Burger">
+          </div>
+          <div class="item-details">
+            <h3 class="item-name">Chili Crunch Burger</h3>
+            <p class="item-description">Spicy chili with crispy crunch</p>
+            <span class="item-price">Rs 1,100.00</span>
+          </div>
+          <div class="item-quantity">
+            <button class="qty-btn">-</button>
+            <span class="qty-number">2</span>
+            <button class="qty-btn">+</button>
+          </div>
+          <div class="item-total">
+            <span class="total-price" id="total-price-item">Rs 2,200.00</span>
+          </div>
+          <button class="btn-remove" onclick="removeItem(this,'Chili_Crunch')"><i class="ri-close-line"></i></button>
+        </div>`;
+        subtotal += 2200;
+        break;
+          case  'Chili_Crunch':
          body += `<div class="cart-item">
           <div class="item-image">
             <img src="asset/Chili Crunch Burger.jpg" alt="Chili crunch burger">
@@ -145,11 +135,11 @@ function viewCart() {
           <div class="itme-total">
             <span class="total-price" id="total-price-item" >Rs 1,100.00</span>
           </div>
-          <button class="btn-remove" onclick="removeItem(this,'Bacon_cheddar_burger')"><i class="ri-close-line"></i></button>
+          <button class="btn-remove" onclick="removeItem(this,'Chili_Crunch')"><i class="ri-close-line"></i></button>
         </div>`;
          subtotal += 1100;
         break;
- case  'Classic burger':
+ case  'Classic':
          body += `<div class="cart-item">
           <div class="item-image">
             <img src="asset/classic.jpg" alt="Classic burger">
@@ -167,12 +157,12 @@ function viewCart() {
           <div class="itme-total">
             <span class="total-price" id="total-price-item" >Rs 430.00</span>
           </div>
-          <button class="btn-remove" onclick="removeItem(this,'Chili_crunch_burger')"><i class="ri-close-line"></i></button>
+          <button class="btn-remove" onclick="removeItem(this,'Classic')"><i class="ri-close-line"></i></button>
         </div>`;
          subtotal += 430;
         break;
 
-        case  'Double stack beef burger':
+        case  'Double_stack_beef':
          body += `<div class="cart-item">
           <div class="item-image">
             <img src="asset/double-stack-beef-burger.jpg" alt="double-stack-beef-burger">
@@ -190,12 +180,12 @@ function viewCart() {
           <div class="itme-total">
             <span class="total-price" id="total-price-item" >Rs 2600.00</span>
           </div>
-          <button class="btn-remove" onclick="removeItem(this,'Double stack beef burger')"><i class="ri-close-line"></i></button>
+          <button class="btn-remove" onclick="removeItem(this,'Double_stack_beef')"><i class="ri-close-line"></i></button>
         </div>`;
          subtotal += 2600;
         break;
       
-         case  'Hawaiian pineapple burger':
+         case  'Hawaiian_pineapple_burger ':
          body += `<div class="cart-item">
           <div class="item-image">
             <img src="asset/hawaiian-burger-pineapple-ham-cheese-topped-crispy-fried-onion.jpg" alt="Hawaiian pineapple burger">
@@ -213,20 +203,20 @@ function viewCart() {
           <div class="itme-total">
             <span class="total-price" id="total-price-item" >Rs 430.00</span>
           </div>
-          <button class="btn-remove" onclick="removeItem(this,'Hawaiian_pineapple_burger')"><i class="ri-close-line"></i></button>
+          <button class="btn-remove" onclick="removeItem(this,'Hawaiian_pineapple_burger ')"><i class="ri-close-line"></i></button>
         </div>`;
          subtotal += 2700;
         break;
 
-          case  'Classic french fries':
+         case  'mushroom_burger ':
          body += `<div class="cart-item">
           <div class="item-image">
-            <img src="asset/Classic French Fries.jpg" alt="Classic French Fries">
+            <img src="asset/" alt="mushroom_burger">
           </div>
           <div class="item-details">
             <h3 class="item-name">Chili crunch burger</h3>
-            <p class="item-description">Juicy Hawaiian pineapple burger with crispy bacon</p>
-            <span class="item-price">Rs 550.00</span>
+            <p class="item-description">Juicy mushroom_burger burger with crispy bacon</p>
+            <span class="item-price">Rs 2700.00</span>
           </div>
           <div class="item-quantity">
             <button class="qty-btn">-</button>
@@ -236,15 +226,37 @@ function viewCart() {
           <div class="itme-total">
             <span class="total-price" id="total-price-item" >Rs 430.00</span>
           </div>
+          <button class="btn-remove" onclick="removeItem(this,'mushroom_burger')"><i class="ri-close-line"></i></button>
+        </div>`;
+         subtotal += 2700;
+        break;
+          case  'Classic_french_fries':
+         body += `<div class="cart-item">
+          <div class="item-image">
+            <img src="asset/Classic French Fries.jpg" alt="Classic French Fries">
+          </div>
+          <div class="item-details">
+            <h3 class="item-name">Chili crunch burger</h3>
+            <p class="item-description">Juicy Classic_french_fries with crispy bacon</p>
+            <span class="item-price">Rs 550.00</span>
+          </div>
+          <div class="item-quantity">
+            <button class="qty-btn">-</button>
+            <span class="qty-number">1</span>
+            <button class="qty-btn">+</button>
+          </div>
+          <div class="itme-total">
+            <span class="total-price" id="total-price-item" >Rs 550.00</span>
+          </div>
           <button class="btn-remove" onclick="removeItem(this,'Classic_french_fries')"><i class="ri-close-line"></i></button>
         </div>`;
          subtotal += 550;
         break;
  
-           case  'Chilli cheese fries':
+           case  'Chilli_cheese_fries':
          body += `<div class="cart-item">
           <div class="item-image">
-            <img src="asset/chili-cheese-fries.jpg" alt="asset/chili-cheese-fries.jpg">
+            <img src="asset/chili-cheese-fries.jpg" alt="chili-cheese-fries.jpg">
           </div>
           <div class="item-details">
             <h3 class="item-name">Chili cheese fries</h3>
@@ -264,7 +276,7 @@ function viewCart() {
          subtotal += 700;
         break;
 
-  case  'Curly fries':
+  case  'Curly_Fries':
          body += `<div class="cart-item">
           <div class="item-image">
             <img src="asset/Curly Fries.jpg" alt="asset/Curly Fries.jpg">
@@ -282,12 +294,12 @@ function viewCart() {
           <div class="itme-total">
             <span class="total-price" id="total-price-item" >Rs 700.00</span>
           </div>
-          <button class="btn-remove" onclick="removeItem(this,'Curly_fries')"><i class="ri-close-line"></i></button>
+          <button class="btn-remove" onclick="removeItem(this,'Curly_Fries')"><i class="ri-close-line"></i></button>
         </div>`;
          subtotal += 700;
         break;
 
-        case  'Garlic parmesan fries':
+        case  'Garlic_Parmesan_Fries':
          body += `<div class="cart-item">
           <div class="item-image">
             <img src="asset/Garlic Parmesan Fries.jpg" alt="asset/Garlic Parmesan Fries.jpg">
@@ -305,12 +317,12 @@ function viewCart() {
           <div class="itme-total">
             <span class="total-price" id="total-price-item" >Rs 700.00</span>
           </div>
-          <button class="btn-remove" onclick="removeItem(this,'Garlic_parmesan_fries')"><i class="ri-close-line"></i></button>
+          <button class="btn-remove" onclick="removeItem(this,'Garlic_Parmesan_Fries')"><i class="ri-close-line"></i></button>
         </div>`;
          subtotal += 1700;
         break;
 
-        case  'Sweet potato fries':
+        case  'Sweet_Potato_Fries':
          body += `<div class="cart-item">
           <div class="item-image">
             <img src="asset/Sweet Potato Fries.jpg" alt="asset/Sweet Potato Fries.jpg">
@@ -326,18 +338,187 @@ function viewCart() {
             <button class="qty-btn">+</button>
           </div>
           <div class="itme-total">
-            <span class="total-price" id="total-price-item" >Rs 700.00</span>
+            <span class="total-price" id="total-price-item" >Rs 650.00</span>
           </div>
-          <button class="btn-remove" onclick="removeItem(this,'Sweet_potato_fries')"><i class="ri-close-line"></i></button>
+          <button class="btn-remove" onclick="removeItem(this,'Sweet_Potato_Fries')"><i class="ri-close-line"></i></button>
         </div>`;
          subtotal += 650;
         break;
+case  'Waffle_Fries':
+         body += `<div class="cart-item">
+          <div class="item-image">
+            <img src="asset/Waffle Fries.jpg" alt="asset/Waffle Fries.jpg>
+          </div>
+          <div class="item-details">
+            <h3 class="item-name">Waffle fries</h3>
+            <p class="item-description">best potato and well tast</p>
+            <span class="item-price">Rs 750.00</span>
+          </div>
+          <div class="item-quantity">
+            <button class="qty-btn">-</button>
+            <span class="qty-number">1</span>
+            <button class="qty-btn">+</button>
+          </div>
+          <div class="itme-total">
+            <span class="total-price" id="total-price-item" >Rs 750.00</span>
+          </div>
+          <button class="btn-remove" onclick="removeItem(this,'Waffle_Fries')"><i class="ri-close-line"></i></button>
+        </div>`;
+         subtotal += 750;
+        break;
 
+case  ' Coca-cola':
+         body += `<div class="cart-item">
+          <div class="item-image">
+            <img src="asset/coca.jpg" alt=asset/coca.jpg>
+          </div>
+          <div class="item-details">
+            <h3 class="item-name">Coca-cola</h3>
+            <p class="item-description">best drinks and well tast</p>
+            <span class="item-price">Rs 150.00</span>
+          </div>
+          <div class="item-quantity">
+            <button class="qty-btn">-</button>
+            <span class="qty-number">1</span>
+            <button class="qty-btn">+</button>
+          </div>
+          <div class="itme-total">
+            <span class="total-price" id="total-price-item" >Rs 150.00</span>
+          </div>
+          <button class="btn-remove" onclick="removeItem(this,'Coca-cola')"><i class="ri-close-line"></i></button>
+        </div>`;
+         subtotal += 150;
+        break;        
 
+case  'Cream_soda':
+         body += `<div class="cart-item">
+          <div class="item-image">
+            <img src="asset/Cream-soda.jpg" alt=asset/Cream-soda.jpg>
+          </div>
+          <div class="item-details">
+            <h3 class="item-name">Cream-soda</h3>
+            <p class="item-description">best drinks and well tast</p>
+            <span class="item-price">Rs 150.00</span>
+          </div>
+          <div class="item-quantity">
+            <button class="qty-btn">-</button>
+            <span class="qty-number">1</span>
+            <button class="qty-btn">+</button>
+          </div>
+          <div class="itme-total">
+            <span class="total-price" id="total-price-item" >Rs 150.00</span>
+          </div>
+          <button class="btn-remove" onclick="removeItem(this,'Cream_soda')"><i class="ri-close-line"></i></button>
+        </div>`;
+         subtotal += 150;
+        break; 
 
-        }
-    });
+        case  'Pepsi':
+         body += `<div class="cart-item">
+          <div class="item-image">
+            <img src="asset/pepsi.jpg" alt=asset/pepsi.jpg>
+          </div>
+          <div class="item-details">
+            <h3 class="item-name">Pepsi</h3>
+            <p class="item-description">best drinks and well tast</p>
+            <span class="item-price">Rs 150.00</span>
+          </div>
+          <div class="item-quantity">
+            <button class="qty-btn">-</button>
+            <span class="qty-number">1</span>
+            <button class="qty-btn">+</button>
+          </div>
+          <div class="itme-total">
+            <span class="total-price" id="total-price-item" >Rs 150.00</span>
+          </div>
+          <button class="btn-remove" onclick="removeItem(this,'Pepsi')"><i class="ri-close-line"></i></button>
+        </div>`;
+         subtotal += 150;
+        break; 
+        
+        case  'Fanta_Orange':
+         body += `<div class="cart-item">
+          <div class="item-image">
+            <img src="asset/fantaorange.jpg" alt=asset/Cream-soda.jpg>
+          </div>
+          <div class="item-details">
+            <h3 class="item-name">Fanta Orange</h3>
+            <p class="item-description">best drinks and well tast</p>
+            <span class="item-price">Rs 150.00</span>
+          </div>
+          <div class="item-quantity">
+            <button class="qty-btn">-</button>
+            <span class="qty-number">1</span>
+            <button class="qty-btn">+</button>
+          </div>
+          <div class="itme-total">
+            <span class="total-price" id="total-price-item" >Rs 150.00</span>
+          </div>
+          <button class="btn-remove" onclick="removeItem(this,'Fanta_Orange')"><i class="ri-close-line"></i></button>
+        </div>`;
+         subtotal += 150;
+        break; 
 
-    document.getElementById("cart-items-section").innerHTML = body;
-    console.log(">>" + body);
+        case  'Fanta_Pineapple':
+         body += `<div class="cart-item">
+          <div class="item-image">
+            <img src="asset/fantapinaple.jpg" alt=asset/fantapinaple.jpg>
+          </div>
+          <div class="item-details">
+            <h3 class="item-name">Fanta Pineapple</h3>
+            <p class="item-description">best drinks and well tast</p>
+            <span class="item-price">Rs 150.00</span>
+          </div>
+          <div class="item-quantity">
+            <button class="qty-btn">-</button>
+            <span class="qty-number">1</span>
+            <button class="qty-btn">+</button>
+          </div>
+          <div class="itme-total">
+            <span class="total-price" id="total-price-item" >Rs 250.00</span>
+          </div>
+          <button class="btn-remove" onclick="removeItem(this,'Fanta_pineapple')"><i class="ri-close-line"></i></button>
+        </div>`;
+         subtotal += 250;
+        break; 
+         default:
+        body += `<div class="cart-item">
+          <div class="item-image">
+            <img src="https://placehold.co/600x400" alt="Bacon beef burger">
+          </div>
+          <div class="item-details">
+            <h3 class="item-name">Null</h3>
+            <p class="item-description">Null</p>
+            <span class="item-price">Rs #,###.##</span>
+          </div>
+          <div class="item-quantity">
+            <button class="qty-btn">-</button>
+            <span class="qty-number">1</span>
+            <button class="qty-btn">+</button>
+          </div>
+          <div class="item-total">
+            <span class="total-price">Rs #,###.##</span>
+          </div>
+          <button class="btn-remove" onclick="removeItem(this,"null")"><i class="ri-close-line"></i></button>
+        </div>`;
+        break;
+    }
+  });
+
+  document.getElementById("cart-items-section").innerHTML = body;
+  document.getElementById("sub-total").innerText = "Rs " + (subtotal) + ".00";
+  document.getElementById("summary-value").innerText = "Rs " + (subtotal * 0.1)+ ".00";
+  document.getElementById("total-amount").innerText = "Rs " + (subtotal + (subtotal * 0.1)+100) + ".00";
+}
+
+function removeItem(element,name) {
+  element.parentNode.remove();  
+  subproducts = JSON.parse(localStorage.getItem("Items"));
+  const index = subproducts.indexOf(name);
+  if (index > -1) {
+    subproducts.splice(index, 1);
+  }
+  localStorage.setItem("Items", JSON.stringify(subproducts));
+
+  viewCart();
 }
